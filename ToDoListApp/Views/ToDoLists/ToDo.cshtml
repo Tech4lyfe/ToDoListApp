@@ -1,0 +1,24 @@
+﻿@model ToDoListApp.Models.ViewModels.Todo.TodoViewModel
+
+@{
+    ViewBag.Title = "Todo";
+    //Layout = "~/Views/Shared/_LayoutToDoList.cshtml";
+}
+
+
+<link href="~/Content/ToDoListStyle.css" rel="stylesheet" />
+
+
+
+<h1 id="threeD">ToDo App</h1>
+
+@using (Html.BeginForm("Todo", "ToDoLists"))
+{
+    @Html.EditorFor(x => x.TodoEntry)
+}
+
+<ul></ul>
+
+<p id="itemsLeft"></p>
+
+<button class="btn btn-danger"> Delete completed</button>    <button class="btn btn-success">New List </button>

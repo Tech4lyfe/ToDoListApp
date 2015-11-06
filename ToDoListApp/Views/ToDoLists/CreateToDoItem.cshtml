@@ -1,0 +1,243 @@
+﻿@model ToDoListApp.Models.ViewModels.Todo.ToDoCreateViewModel
+@{
+    ViewBag.Title = "Todo";
+    //Layout = "~/Views/Shared/_LayoutToDoList.cshtml";
+}
+
+<link href="~/Content/ToDoListStyle.css" rel="stylesheet" />
+@Html.Hidden("ToDoListId", Model.ToDoList.ToDoListId)
+
+<div class="container">
+    <div class="list-wrap">
+        <div class="list-inner-wrap">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="title">ToDo App</h1>
+                    <h3 class="title">Add Task</h3>
+                    <div class="text-center">
+                        <div class="form-inline">
+                            <div class="input-group">
+                                <input type="text" id="entryValue" class="form-control" placeholder="Enter Task" />
+                                <span class="input-group-btn">
+                                    <button class="addButton btn btn-primary">
+                                        <span class="glyphicon glyphicon-plus">
+                                            Add
+                                        </span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="title">To Do</h2>
+                <ul id="sortable" class="uncompleted list-group">
+                    @foreach (var todoItem in Model.ToDoList.ToDoItems.Where(x => x.Completed == false))
+                    {
+                        <li class="list-group-item clearfix">
+
+                            <div style="overflow: hidden">
+                                @Html.Hidden("ToDoItemId", todoItem.ToDoItemId)
+                                @todoItem.Entry
+                                    <button type="button" class="doneButton btn btn-success btn-sm pull-right">
+                                        <span class="glyphicon glyphicon-ok">
+                                        </span>
+                                    </button>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="title">Completed Tasks</h2>
+                <ul class="completed list-group">
+                    @foreach (var todoItem in Model.ToDoList.ToDoItems.Where(x => x.Completed == true))
+                    {
+                        <li class="list-group-item clearfix">
+                            <div style="overflow: hidden">
+                                @Html.Hidden("CompletedToDoItemId", todoItem.ToDoItemId)
+                                @todoItem.Entry
+                                <button class="deleteButton btn btn-danger btn-sm pull-right">
+                                    <span class="glyphicon glyphicon-remove">
+
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

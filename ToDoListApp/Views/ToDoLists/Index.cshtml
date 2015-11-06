@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ToDoListApp.Models.TodoEntities.ToDoList>
+
+@{
+    ViewBag.Title = "Index";
+   
+}
+
+
+<div id="Index"><h2>Task Manager</h2></div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>@Html.DisplayNameFor(model => model.CreateDateTime)</th>
+
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDateTime)
+            </td>
+
+            <td>
+                <a href="@Url.Action("Edit", new { id = item.ToDoListId })">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                    
+                </a> |
+                <a href="@Url.Action("CreateToDoItem", new { id = item.ToDoListId })">
+                    <i class="glyphicon glyphicon-th-list"></i>
+                    
+                </a> |
+                <a href="@Url.Action("Delete", new { id = item.ToDoListId })">
+                    <i class="glyphicon glyphicon-remove"></i>
+                    
+                </a>
+
+            </td>
+        </tr>
+    }
+
+</table>

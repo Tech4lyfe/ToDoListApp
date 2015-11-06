@@ -1,0 +1,161 @@
+﻿
+#Index {
+    text-align:center;
+}
+
+.list-wrap {
+    margin-left: 25%;
+}
+
+li {
+    list-style-type: none;
+    margin: 5%;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 10px;
+}
+
+
+button {
+    display: none;
+}
+
+.divbutton:hover button {
+    display: block;
+}
+
+
+.list-group-item {
+    background-color: #E6E6E6;
+}
+
+.completed li {
+    text-decoration: line-through;
+    
+}
+
+
+/*.btn-primary, .btn-success, .btn-danger {
+    margin-left: 2.5%;
+}*/
+
+.title,h2 {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    font-family: "Rock Salt", cursive;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 300;
+    margin: 10px 0 20px 0;
+}
+
+input {
+    border: none;
+    width: 100%;
+    font-size: 22px;
+    background: #eee;
+    padding: 8px 20px;
+}
+
+ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+    ul #li {
+        width: 100%;
+        list-style-type: none;
+        background: #ccc;
+        color: #666;
+        margin-bottom: 1px;
+        padding: 8px 20px;
+        font-size: 22px;
+    }
+
+        ul #li span {
+            float: right;
+            cursor: pointer;
+            color: #fff;
+        }
+
+.done {
+    text-decoration: line-through;
+    color: #eee;
+}
+
+p#itemsLeft {
+    padding: 8px 20px;
+}
+
+button {
+    /*margin-left: 4px;*/
+    /*width: 280px;
+    margin: 0 auto
+    background: #FF6666;
+    color: #662929;
+    font-size: 16px;
+    border: none;
+    padding: 8px 20px;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 0 0 #662929;
+    border-radius: 4px;
+}
+
+#threeD {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 
+        
+        0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2),
+         0 20px 20px rgba(0,0,0,.15);
+}*/
