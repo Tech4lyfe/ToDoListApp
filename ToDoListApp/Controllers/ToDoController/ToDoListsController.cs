@@ -46,7 +46,7 @@ namespace ToDoListApp.Controllers.ToDoController
         {
             //Todo: What is this???
             ToDoList date = new ToDoList();
-            date.CreateDateTime = DateTime.Now;
+            date.CreateDateTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
 
             return View(date);
         }
