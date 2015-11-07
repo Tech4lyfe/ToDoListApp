@@ -45,10 +45,9 @@ namespace ToDoListApp.Controllers.ToDoController
         public ActionResult Create()
         {
             //Todo: What is this???
-            ToDoList date = new ToDoList();
-            date.CreateDateTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+           
 
-            return View(date);
+            return View();
         }
 
 
@@ -58,6 +57,7 @@ namespace ToDoListApp.Controllers.ToDoController
         {
             if (ModelState.IsValid)
             {
+                toDoList.CreateDateTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
                 _db.ToDoLists.Add(toDoList);
                 _db.SaveChanges();
                 return RedirectToAction("Index");

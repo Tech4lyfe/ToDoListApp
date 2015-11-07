@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ToDoListApp.Models.TodoEntities
@@ -12,6 +13,7 @@ namespace ToDoListApp.Models.TodoEntities
         [Display(Name = "Title")]
         public string Title { get; set; }
         [Display(Name = "Create Date")]
+        [ReadOnly(true)]
         public DateTime CreateDateTime { get; set; }
 
         public virtual List<ToDoItem> ToDoItems { get; set; }
