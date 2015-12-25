@@ -82,17 +82,20 @@ namespace ToDoListApp.Controllers.ToDoController
         }
 
 
-        [HttpPost]
+        [HttpPost] 
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(ToDoList toDoList)
+        public ActionResult Edit( ToDoList model)
         {
+            var toDoList = _db.ToDoLists.Find(model.ToDoListId);
+            toDoList.Title = model.Title;
+           
             if (ModelState.IsValid)
             {
                 _db.Entry(toDoList).State = EntityState.Modified;
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(toDoList);
+            return View(model);
         }
 
         // GET: ToDoLists/Delete/5

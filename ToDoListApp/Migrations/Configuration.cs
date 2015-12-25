@@ -14,6 +14,8 @@ namespace ToDoListApp.Migrations
 
         protected override void Seed(ToDoListApp.Models.DbContext.ToDoContext context)
         {
+
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
